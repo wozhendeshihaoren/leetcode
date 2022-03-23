@@ -1,0 +1,20 @@
+class Solution {
+    public int search(int[] nums, int target) {
+      int low = 0;
+      int n = nums.length - 1;
+      int high = n;
+     while (low <= high) {
+         int number = low + (high-low) / 2; //防止计算溢出
+         if (nums[number] == target) {          //二分位查找
+             return number ;
+         }else if (nums[number] > target) {
+             high = number - 1;
+         }else {
+             low = number + 1;
+         }
+     }
+     return -1;
+}
+}
+//时间复杂度上为O(log n)
+//空间复杂度O(1)
