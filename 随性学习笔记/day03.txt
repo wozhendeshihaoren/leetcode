@@ -1,0 +1,12 @@
+SSM项目搭建心得：
+
+  1、spring和springmvc的配置文件分别要在web.xml配置加载
+     到org.springframework.web.context.ContextLoaderListener
+     和org.springframework.web.servlet.DispatcherServlet
+
+   2、spring中@Mapper注释是没有用的，需要注重扫描dao
+   层并主动注入org.mybatis.spring.mapper.MapperScannerConfigurer
+
+   3、spring中要想返回json数据，必须要加载jackson相关的
+   资源，jackson是spirngmvc默认加载的，所以只需要打开
+   springmvc的注解自动加载即可

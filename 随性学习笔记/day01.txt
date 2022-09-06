@@ -1,0 +1,47 @@
+reids的命令操作
+   string类型：
+       set: 保存操作
+       get: 取回操作
+   
+   Hash类型：
+       Hadd: 保存操作
+       Hget: 取回操作
+
+   
+   list类型：
+        lpush: 保存操作
+	lindex key 索引： 根据索引查早元素
+   
+   set类型：
+        Sadd: 保存
+	Smembers: 取回一个集合中的成员
+
+   zset类型：
+        Zadd: 保存
+        Zrange: 取回一个成员
+   
+
+
+   list实现线程安全的几种方式：
+      1、使用Collection.synchreniedlist(new list()) 保证线程安全
+      2.CopyOnWriteArrayList和ConcurrentLinkedList
+      3.vector
+   
+
+   set实现线程安全的几种方式；
+      1、使用Collection.synchreniedSet(new Set())保证安全
+      2、使用CopyOnWriteSet保证线程安全
+   
+   map实现线程安全的及几种方式：
+      1.hashtable
+      2.Collection.synchreniedMap()
+      3.ConcurrenthashMap
+
+    create table book(
+     id int,
+     name varchar(20),
+     author varchar(20)
+    );
+
+    insert into book(id,name,author) values (1,'java','yang');
+   

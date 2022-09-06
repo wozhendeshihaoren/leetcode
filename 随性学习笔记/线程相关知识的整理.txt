@@ -1,0 +1,22 @@
+ 线程实现同步有五种方式
+    
+    1、synchronized关键字
+        （1）、同步方法
+	（2）同步代码块
+	  wait和notify要配合synchronized使用
+    2、lock
+         （1）ReentrantLock
+	  (2) readwritelock
+
+    3、阻塞队列
+          linkedBlockQueue
+         其实就是lock多重的的引用，里面有大量的await,singnal,awaitall,singnall
+	  加入队列使用put方法，如果队列满了就用awiat进行线程阻塞，
+	  用take方法进行获取，如果队列为空，就用await进行线程阻塞
+	
+    4、ThreadLocal
+        确保每个线程都拥有自己的变量，不受其他线程的影响
+    5、atomicIngter(还有相关数据类型的原子性操作)
+	  里面用了volitile关键字实现了变量级的同步，
+        
+          
